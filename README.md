@@ -1,2 +1,3 @@
-# game
-The game for the web technology course - TU Delft
+# Game
+
+The Game for Web- and Database Technology @ TU Delft
