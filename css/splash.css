@@ -1,0 +1,13 @@
+/*MAIN*/
+body {
+    background-color: rgb(54, 232, 173);
+}
+
+/*IMAGES*/
+.logo {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+}
