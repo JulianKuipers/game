@@ -1,0 +1,111 @@
+html,body {
+    width:100vw;
+    height:100vh;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    background-color: rgb(22, 219, 186);
+}
+
+.board {
+    background-color: rgb(22, 219, 186);
+    width: 50vh;
+    height: 96vh;
+    border: 1vh solid rgb(22, 219, 186);
+    border-radius: 5vh;
+    position: relative;
+    top:0px;
+    left: 40vw;
+}
+
+/* Answer */
+.Answer{
+    width:100%;
+    height:10%;
+    border: 1px solid rgb(22, 219, 186);
+    
+}
+
+.ans{
+    width:90%;
+    height:100%;
+    background-color: rgb(22, 219, 186);
+    margin: 0 auto;
+}
+
+.AnswerBox{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(22, 219, 186);
+}
+
+.Button{
+    width: 30%;
+    height: 10%;
+    background-color: rgb(22, 219, 186);
+    position: absolute;
+    right:0px;
+    top:0px;
+    text-align: center;
+}
+
+/* Guess */
+.Guess{
+    width:100%;
+    height:80%;
+    background-color:rgb(22, 219, 186);
+}
+
+.GuessRow{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(22, 219, 186);
+}
+.GuessColor{
+    width: 80%;
+    height: 100%;
+    background-color:rgb(22, 219, 186);
+}
+.GuessNail{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(22, 219, 186);
+}
+
+.g{
+    width: 20%;
+    height: 90%;
+    margin-right: 9px;
+    margin-left: 5px;
+    margin-top: 4px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+.n{
+    width: 20%;
+    height: 90%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Color */
+.Color{
+    width:100%;
+    height:10%;
+    background-color: rgb(22, 219, 186);
+}
+
+.flex{
+    float: left;
+}
+
+/* statistics */
+
+.help{
+    height: 10vh;
+    width: 10vh;
+    background-color: white;
+    position: fixed;
+    top: 80vh;
+    left:10vh;
+}
