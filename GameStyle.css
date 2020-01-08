@@ -3,7 +3,13 @@ html,body {
     height:100vh;
     overflow-x:hidden;
     overflow-y:hidden;
-    background-color: rgb(22, 219, 186);
+    background-color: rgb(157, 231, 60);
+}
+
+.a{
+    height: 100%;
+    width: 10%;
+    background-color:white;
 }
 
 .board {
@@ -109,3 +115,14 @@ html,body {
     top: 80vh;
     left:10vh;
 }
+
+/* table */
+
+.table{
+    background-color: white;
+    height: 30vh;
+    width: 30vh;
+    position: ficed;
+    top:-100px;
+}
+
