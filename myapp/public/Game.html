@@ -1,0 +1,205 @@
+<html>
+	
+	<head> 
+        <link rel="stylesheet" type="text/css" href="GameStyle.css">
+        <meta charset="utf-8">
+        <title>Mastermind</title>
+	</head>
+
+	<body>
+
+        <!-- test -->
+
+        <div class="board">
+            <div class="Answer">
+                <div class="AnswerBox">
+                    <div class="ans">
+                        <h3>Answer</h3>
+                    </div>
+                </div>
+                <div class="Button">
+                    <h3 class="ButtonText">Check!</h3>
+                </div>
+            </div>
+
+            <div class="Guess">
+                <div class="GuessRow flexer">
+                    <div class ="GuessColor flex" id="1">
+                        <div class="g flex" id="1-1"></div>
+                        <div class="g flex" id="1-2"></div>
+                        <div class="g flex" id="1-3"></div>
+                        <div class="g flex" id="1-4"></div>
+                    </div>
+                    <div class="GuessNail flex">
+                        <div class="n flex"></div>
+                        <div class="n flex"></div>
+                        <div class="n flex"></div>
+                        <div class="n flex"></div>
+                    </div>
+                </div>
+                <div class="GuessRow flexer">
+                        <div class ="GuessColor flex" id="2">
+                            <div class="g flex" id="2-1"></div>
+                            <div class="g flex" id="2-2"></div>
+                            <div class="g flex" id="2-3"></div>
+                            <div class="g flex" id="2-4"></div>
+                        </div>
+                        <div class="GuessNail flex">
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                        </div>
+                </div>
+                <div class="GuessRow flexer">
+                        <div class ="GuessColor flex" id="3">
+                            <div class="g flex" id="3-1"></div>
+                            <div class="g flex" id="3-2"></div>
+                            <div class="g flex" id="3-3"></div>
+                            <div class="g flex" id="3-4"></div>
+                        </div>
+                        <div class="GuessNail flex">
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                        </div>
+                </div>
+                <div class="GuessRow flexer">
+                        <div class ="GuessColor flex" id="4">
+                            <div class="g flex" id="4-1"></div>
+                            <div class="g flex" id="4-2"></div>
+                            <div class="g flex" id="4-3"></div>
+                            <div class="g flex" id="4-4"></div>
+                        </div>
+                        <div class="GuessNail flex">
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                        </div>
+                </div>
+                <div class="GuessRow flexer">
+                        <div class ="GuessColor flex" id="5">
+                            <div class="g flex" id="5-1"></div>
+                            <div class="g flex" id="5-2"></div>
+                            <div class="g flex" id="5-3"></div>
+                            <div class="g flex" id="5-4"></div>
+                        </div>
+                        <div class="GuessNail flex">
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                        </div>
+                </div>
+                <div class="GuessRow flexer">
+                        <div class ="GuessColor flex" id="6">
+                            <div class="g flex" id="6-1"></div>
+                            <div class="g flex" id="6-2"></div>
+                            <div class="g flex" id="6-3"></div>
+                            <div class="g flex" id="6-4"></div>
+                        </div>
+                        <div class="GuessNail flex">
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                        </div>
+                </div>
+                <div class="GuessRow flexer">
+                        <div class ="GuessColor flex" id="7">
+                            <div class="g flex" id="7-1"></div>
+                            <div class="g flex" id="7-2"></div>
+                            <div class="g flex" id="7-3"></div>
+                            <div class="g flex" id="7-4"></div>
+                        </div>
+                        <div class="GuessNail flex">
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                        </div>
+                </div>
+                <div class="GuessRow flexer">
+                        <div class ="GuessColor flex" id="8">
+                            <div class="g flex" id="8-1"></div>
+                            <div class="g flex" id="8-2"></div>
+                            <div class="g flex" id="8-3"></div>
+                            <div class="g flex" id="8-4"></div>
+                        </div>
+                        <div class="GuessNail flex">
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                        </div>
+                </div>
+                <div class="GuessRow flexer">
+                        <div class ="GuessColor flex" id="9">
+                            <div class="g flex" id="9-1"></div>
+                            <div class="g flex" id="9-2"></div>
+                            <div class="g flex" id="9-3"></div>
+                            <div class="g flex" id="9-4"></div>
+                        </div>
+                        <div class="GuessNail flex">
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                        </div>
+                </div>
+                <div class="GuessRow flexer">
+                        <div class ="GuessColor flex" id="10">
+                            <div class="g flex" id="10-1"></div>
+                            <div class="g flex" id="10-2"></div>
+                            <div class="g flex" id="10-3"></div>
+                            <div class="g flex" id="10-4"></div>
+                        </div>
+                        <div class="GuessNail flex">
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                            <div class="n flex"></div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="Color">
+                <div class="c flex blue"></div>
+                <div class="c flex red"></div>
+                <div class="c flex white"></div>
+                <div class="c flex black"></div>
+                <div class="c flex green"></div>
+                <div class="c flex orange"></div>
+                <div class="c flex yellow"></div>
+                <div class="c flex purple"></div>
+            </div>
+        </div>
+        <div class="help">
+            <button>Help</button>
+        </div>
+
+        <div class="table">
+            <table style="width:100%">
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Age</th>
+                </tr>
+                <tr>
+                  <td>Jill</td>
+                  <td>Smith</td>
+                  <td>50</td>
+                </tr>
+                <tr>
+                  <td>Eve</td>
+                  <td>Jackson</td>
+                  <td>94</td>
+                </tr>
+              </table>
+        </div c>
+        <script type="text/javascript" src="app.js"></script>
+	</body>
+
+</html>
