@@ -8,17 +8,16 @@ var main = function () {
     // Initiate userId
     userId = 1;
 
-    // Read the JSON file for the game statistics
-    /*statisticsFile = gameId + "-gamestatistics.json";
-    $.getJSON(statisticsFile, funtion (player) {
-        if (player.currentGuesser == userId) {
+    // Read the JSON file for the game state
+    statisticsFile = gameId + "-gamestatistics.json";
+    $.getJSON(statisticsFile, funtion () {
+        if (statisticsFile.currentGuesser == userId) {
             guesser = true;
         else {
             guesser = false;
         }
-    });*/
+    });
 
-    // Read the JSON file for the current game state
 
     // Generate the HTML for the current game state
 
