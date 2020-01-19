@@ -9,14 +9,15 @@ var main = function () {
     userId = 1;
 
     // Read the JSON file for the game state
-    statisticsFile = gameId + "-gamestatistics.json";
+   /* statisticsFile = gameId + "-gamestatistics.json";
     $.getJSON(statisticsFile, funtion () {
         if (statisticsFile.currentGuesser == userId) {
             guesser = true;
+        }
         else {
             guesser = false;
         }
-    });
+    }); */
 
 
     // Generate the HTML for the current game state
@@ -25,12 +26,12 @@ var main = function () {
 
     var activeRow = 10; // this needs to eventually get the value from gamestate file
 
-    if (activeRow = 10) {
+    if (activeRow == 10) {
         $("div#" + activeRow + ".GuessColor.flex").addClass("activeRow");
     }
     else if (activeRow < 10 && activeRow > 0) {
-        $("div#" + (activeRow - 1) + ".guesscolor.flex").removeClass("activeRow");
-        $("div#" + activeRow + ".guesscolor.flex").addClass("activeRow");
+        $("div#" + (activeRow + 1) + ".GuessColor.flex").removeClass("activeRow");
+        $("div#" + activeRow + ".GuessColor.flex").addClass("activeRow");
     }
     else {
         // game ends
@@ -38,42 +39,56 @@ var main = function () {
 
     var currentColor;
 
-    $(".c .blue").on("click", function () {
-        currentColor = ".blue";
+    $(".c.blue").on("click", function () {
+        currentColor = "blue";
     });
 
-    $(".c .red").on("click", function () {
-        currentColor = ".red";
+    $(".c.red").on("click", function () {
+        currentColor = "red";
     });
 
-    $(".c .white").on("click", function () {
-        currentColor = ".white";
+    $(".c.white").on("click", function () {
+        currentColor = "white";
     });
 
-    $(".c .black").on("click", function () {
-        currentColor = ".black";
+    $(".c.black").on("click", function () {
+        currentColor = "black";
     });
 
-    $(".c .green").on("click", function () {
-        currentColor = ".green";
+    $(".c.green").on("click", function () {
+        currentColor = "green";
     });
 
-    $(".c .orange").on("click", function () {
-        currentColor = ".orange";
+    $(".c.orange").on("click", function () {
+        currentColor = "orange";
     });
 
-    $(".c .yellow").on("click", function () {
-        currentColor = ".yellow";
+    $(".c.yellow").on("click", function () {
+        currentColor = "yellow";
     });
 
-    $(".c .purple").on("click", function () {
-        currentColor = ".purple";
-        console.log("purple");
+    $(".c.purple").on("click", function () {
+        currentColor = "purple";
     });
-console.log(currentColor);
 
-    $(".activeRow .g").on("click", function () {
-        $(".g").addClass(currentColor);
+    $("div#" + activeRow + "-1").on("click", function () {
+        $("div#" + activeRow + "-1").removeClass();
+        $("div#" + activeRow + "-1").addClass("g flex " + currentColor);
+    });
+
+    $("div#" + activeRow + "-2").on("click", function () {
+        $("div#" + activeRow + "-2").removeClass();
+        $("div#" + activeRow + "-2").addClass("g flex " + currentColor);
+    });
+
+    $("div#" + activeRow + "-3").on("click", function () {
+        $("div#" + activeRow + "-3").removeClass();
+        $("div#" + activeRow + "-3").addClass("g flex " + currentColor);
+    });
+
+    $("div#" + activeRow + "-4").on("click", function () {
+        $("div#" + activeRow + "-4").removeClass();
+        $("div#" + activeRow + "-4").addClass("g flex " + currentColor);
     });
 
     // Modify the JSON file and send to other player
