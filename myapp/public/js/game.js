@@ -1,89 +1,68 @@
-var main = function () {
-    "use strict";
-    var currentGuesser, currrentChecker, statisticsFile, userId, guesser, gameId;
+console.log('Ive hacked the main-frame');
 
-    // TO decide roles: Every user gets a userID assigned by serever. If ID is odd, user starts as guesser and of even, starts as checker.
+$(document).ready(function(){
 
+    let selectedColor = '';
+    let guess = 0;
 
-    // Initiate userId
-    userId = 1;
+    let temp = $('.g');
+    let guessBox = [];
+    for(let i = 9; i >= 0; i--){
+        guessBox.push(temp[i]);
+    }
 
-    // Read the JSON file for the game statistics
-    /*statisticsFile = gameId + "-gamestatistics.json";
-    $.getJSON(statisticsFile, funtion (player) {
-        if (player.currentGuesser == userId) {
-            guesser = true;
-        else {
-            guesser = false;
+   
+    // Need to make a submit button for the nails, and alos change the ids for the nails so that this exact button fucntion can be impmented for that one
+    $('.Button').click(function(){
+
+        $('.active').removeClass('active');
+        guess++;
+        let cur = 10 - guess;
+        for(let i = 0; i <= 4; i++){
+            $(`#${cur}-${i}`).addClass('active');
+            $(`#${cur}-${i}`).addClass('active');
         }
-    });*/
-
-    // Read the JSON file for the current game state
-
-    // Generate the HTML for the current game state
-
-    // Let the guesser make his move and check the validity
-
-    var activeRow = 10; // this needs to eventually get the value from gamestate file
-
-    if (activeRow = 10) {
-        $("div#" + activeRow + ".GuessColor.flex").addClass("activeRow");
-    }
-    else if (activeRow < 10 && activeRow > 0) {
-        $("div#" + (activeRow - 1) + ".guesscolor.flex").removeClass("activeRow");
-        $("div#" + activeRow + ".guesscolor.flex").addClass("activeRow");
-    }
-    else {
-        // game ends
-    }
-
-    var currentColor;
-
-    $(".c .blue").on("click", function () {
-        currentColor = ".blue";
     });
 
-    $(".c .red").on("click", function () {
-        currentColor = ".red";
+
+    $('.c').click(function(){
+        let peg = ($(this).parent())[0];
+        selectedColor = 
+        $(this).css('background-color');
+        console.log(selectedColor);
+        $(peg).css('background-color', selectedColor)
     });
 
-    $(".c .white").on("click", function () {
-        currentColor = ".white";
-    });
 
-    $(".c .black").on("click", function () {
-        currentColor = ".black";
-    });
+    $('.g').click(function(){
 
-    $(".c .green").on("click", function () {
-        currentColor = ".green";
-    });
+        if($(this).hasClass('active')){
+            // let c = $(this).css('background-color: blue');
+            $(this).css('background-color', selectedColor)
+            // selectedColor = c;
+        }
+    })
 
-    $(".c .orange").on("click", function () {
-        currentColor = ".orange";
-    });
+    let clickcount = 0;
+    let c = 'red';
+    $('.n').click(function(){
 
-    $(".c .yellow").on("click", function () {
-        currentColor = ".yellow";
-    });
-
-    $(".c .purple").on("click", function () {
-        currentColor = ".purple";
-        console.log("purple");
-    });
-console.log(currentColor);
-
-    $(".activeRow .g").on("click", function () {
-        $(".g").addClass(currentColor);
-    });
-
-    // Modify the JSON file and send to other player
-
-    // Let the checker make his moves
-
-    // Switch the roles of the player
-
-    // Update JSON file with game statistics
-}
-
-$(document).ready(main);
+        if($(this).hasClass('active')){
+            if(clickcount == 0){
+                c = 'red';
+            }
+            if(clickcount == 1){
+                c = 'black';
+            }
+            if(clickcount == 2){
+                c = 'white';
+            }
+            clickcount++;
+            if(clickcount >= 3){
+                clickcount = 0;
+            }
+            $(this).css('background-color', c)
+        }
+        
+    })
+});
