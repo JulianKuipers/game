@@ -1,6 +1,20 @@
-console.log('Ive hacked the main-frame');
-
 $(document).ready(function(){
+
+    var playerID, file;
+    
+    var socket = new WebSocket("ws://localhost:3000");
+
+    socket.onmessage = function (event) {
+        console.log("working on it");
+        playerID = event.data; 
+        console.log(playerID);
+        socket.OPEN();
+    };
+
+    function sendJSON() {
+        socket.send(file);
+    }
+
 
     let selectedColor = '';
     let guess = 0;
@@ -14,10 +28,26 @@ $(document).ready(function(){
    
     // Need to make a submit button for the nails, and alos change the ids for the nails so that this exact button fucntion can be impmented for that one
     $('.Button').click(function(){
+        let cur = 10 - guess;
+        var row = [];
+        for (var i = 0; i < 4; i++) {
+            row[i] =  $(`#${cur}-${i + 1}`);
+        }
+        if (guess == 0) {
+            file = JSON.stringify(row);
+        }
+        else {
+            var json = JSON.parse(file);
+            file = file.append(row);
+            file = JSON.stringify(file);
+        }
+
+        sendJSON();
+
 
         $('.active').removeClass('active');
         guess++;
-        let cur = 10 - guess;
+        cur = 10 - guess;
         for(let i = 0; i <= 4; i++){
             $(`#${cur}-${i}`).addClass('active');
             $(`#${cur}-${i}`).addClass('active');
